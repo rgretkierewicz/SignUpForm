@@ -3,20 +3,25 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Button;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -55,7 +60,7 @@ public class SignUpController implements Initializable {
 
 
     @FXML
-    void onActionSignUp(ActionEvent event) {
+    void onActionSignUp(ActionEvent event) throws IOException {
         String passwordChanges = "Password must contain the following:\n";
 
         String fName = firstNameTxt.getText();
@@ -91,7 +96,7 @@ public class SignUpController implements Initializable {
             isValidDob = false;
         }
         //Check that first password entered matches second.
-        if (!password.equals(passwordConfirmation)) {
+        if (!password.equals(passwordConfirmation) || passwordConfirmation.equals("")) {
             isValidPasswordConfirmation = false;
         }
 
@@ -99,6 +104,11 @@ public class SignUpController implements Initializable {
         if (!password.matches(".{6,16}")) {
             passwordChanges +="6 - 16 characters\n";
             isValidPassword = false;
+        }
+        if(!password.matches(".*[0-9]+.*")) {
+            passwordChanges +="At least 1 number\n";
+            isValidPassword = false;
+
         }
         if (!password.matches(".*[A-Z]+.*")) {
             passwordChanges +="At least 1 uppercase character\n";
@@ -161,17 +171,32 @@ public class SignUpController implements Initializable {
             confirmPasswordInvalid.setText("*Passwords must match.");
         }
         else {
-            passwordInvalid.setText("");
+            confirmPasswordInvalid.setText("");
         }
 
         //Password requirements validation
         if (!isValidPassword) {
             passwordInvalid.setText("*Please enter a valid password");
-
             text1.setText(passwordChanges);
         }
         else {
+            passwordInvalid.setText("");
             text1.setText("");
+        }
+
+        if (isValidFName && isValidLName && isValidPassword && isValidPasswordConfirmation && isValidEmail && isValidPhone && isValidDob) {
+            Alert success = new Alert(Alert.AlertType.INFORMATION);
+            success.setTitle("Success!");
+            success.setContentText("User sign-up successful. You should receive a confirmation email in your inbox shortly.");
+            success.setHeight(400);
+            success.show();
+
+            Stage stage;
+            Parent scene;
+            stage = (Stage) ((javafx.scene.control.Button) event.getSource()).getScene().getWindow();
+            scene = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
+            stage.setScene(new Scene(scene));
+            stage.show();
         }
 
     }
@@ -186,10 +211,13 @@ public class SignUpController implements Initializable {
 
         passwordTxt.setTooltip(passwordToolTip);
 
-        Image venus = new Image("view/venus.png");
+
+        Image venus = new Image("view/venus2.png");
         ImageView iv1 = new ImageView(venus);
         iv1.setFitWidth(40);
         iv1.setFitHeight(40);
+
+
 
     }
 

@@ -18,9 +18,9 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="650.0" minHeight="600.0" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+<AnchorPane maxHeight="700.0" minHeight="600.0" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
    <children>
-      <VBox layoutX="232.0" layoutY="102.0" prefHeight="405.0" prefWidth="324.0">
+      <VBox layoutX="232.0" layoutY="149.0" prefHeight="405.0" prefWidth="324.0">
          <children>
             <GridPane maxHeight="-Infinity" maxWidth="300.0" minHeight="-Infinity" minWidth="300.0" prefHeight="400.0" prefWidth="300.0">
               <columnConstraints>
@@ -199,18 +199,18 @@
             </GridPane>
          </children>
       </VBox>
-      <Button layoutX="350.0" layoutY="571.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionSignUp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffa31a;" text="Sign Up" textFill="#1d1c1c">
+      <Button layoutX="356.0" layoutY="605.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionSignUp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffa31a;" text="Sign Up" textFill="#1d1c1c">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="220.0" layoutY="14.0" prefHeight="56.0" prefWidth="210.0" text="Create your account!" textFill="#0d0d0d">
+      <Label layoutX="220.0" layoutY="4.0" prefHeight="56.0" prefWidth="210.0" text="Create your account!" textFill="#0d0d0d">
          <font>
             <Font name="Calibri Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#14575e" height="532.0" layoutX="-4.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b7e88" height="65.0" layoutX="-3.0" layoutY="586.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#14575e" height="576.0" layoutX="-4.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b7e88" height="65.0" layoutX="-4.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b7e88" height="65.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
       <AnchorPane layoutX="1.0" layoutY="230.0" prefHeight="146.0" prefWidth="200.0">
          <children>
@@ -231,7 +231,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <TextFlow fx:id="textFlow1" layoutX="232.0" layoutY="50.0" prefHeight="72.0" prefWidth="382.0">
+      <TextFlow fx:id="textFlow1" layoutX="220.0" layoutY="55.0" prefHeight="103.0" prefWidth="382.0">
          <children>
             <Text fx:id="text1" fill="#e20d0d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.93359375" />
          </children>
