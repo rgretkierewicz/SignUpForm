@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="650.0" minHeight="600.0" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <children>
+      <VBox layoutX="232.0" layoutY="102.0" prefHeight="405.0" prefWidth="324.0">
+         <children>
+            <GridPane maxHeight="-Infinity" maxWidth="300.0" minHeight="-Infinity" minWidth="300.0" prefHeight="400.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="104.33331298828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0000406901042" minWidth="10.0" prefWidth="195.00002034505212" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label layoutX="10.0" layoutY="52.0" text="Last Name" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="92.0" text="First Name">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Date of Birth" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="309.0" text="Email" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="213.0" text="Phone Number" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="165.0" text="Password" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <TextField fx:id="lastNameTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="lastNameInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="58.0" prefWidth="267.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="firstNameTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="firstNameInvalid" textFill="#d91313" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <PasswordField fx:id="passwordTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></PasswordField>
+                              <Label fx:id="passwordInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <TextField fx:id="emailTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="example@example.com">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="emailInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <TextField fx:id="phoneTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="xxx-xxx-xxxx">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="phoneInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <TextField fx:id="dobTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="MM/DD/YYYY">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="dobInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="144.0" text="Confirm Password" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="17.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <VBox prefHeight="44.0" prefWidth="157.0">
+                           <children>
+                              <PasswordField fx:id="passwordConfirmationTxt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <Label fx:id="confirmPasswordInvalid" textFill="#d91313" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button layoutX="350.0" layoutY="571.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionSignUp" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffa31a;" text="Sign Up" textFill="#1d1c1c">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="220.0" layoutY="14.0" prefHeight="56.0" prefWidth="210.0" text="Create your account!" textFill="#0d0d0d">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#14575e" height="532.0" layoutX="-4.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b7e88" height="65.0" layoutX="-3.0" layoutY="586.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b7e88" height="65.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="209.0" />
+      <AnchorPane layoutX="1.0" layoutY="230.0" prefHeight="146.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" prefHeight="56.0" prefWidth="172.0" text="Venus Tech" textFill="#f4f4f4">
+               <font>
+                  <Font name="Monospaced Regular" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="164.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@venus2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="73.0" prefHeight="27.0" prefWidth="172.0" text="Experience innovation" textFill="#f4f4f4">
+               <font>
+                  <Font name="Monospaced Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextFlow fx:id="textFlow1" layoutX="232.0" layoutY="50.0" prefHeight="72.0" prefWidth="382.0">
+         <children>
+            <Text fx:id="text1" fill="#e20d0d" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="337.93359375" />
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>
